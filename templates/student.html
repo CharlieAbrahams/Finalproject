@@ -1,0 +1,57 @@
+<html>
+   <head>
+      <link rel="stylesheet" href="student.css">
+  </head>
+   <body>
+      <div id="navbar2">
+         <nav>
+             <ul>
+                 <li><a href="home.html">home</a></li>
+                 <li><a href="student.html">enrole</a></li>
+                 <li><a href="list.html">lists</a></li>
+             </ul>
+         </nav>
+                  </div>
+     <div class="content2">
+         <h1>Enrole</h1>
+     </div>
+     <div class="banner2">
+     </div>
+     <div id="manuBtn">
+         <img src="menu.png" id="menu">
+     </div>
+     <script>
+         var manuBtn = document.getElementById("manuBtn")
+         var navbar = document.getElementById("navbar2")
+         var menu = document.getElementById("menu")
+
+         manuBtn.onclick = function(){
+             if(navbar.style.right == "-250px"){
+                 navbar.style.right = "0";
+                 menu.src = "close.png";
+             }
+             else{
+                 navbar.style.right = "-250px";
+                 menu.src = "menu.png";
+             }
+         }
+     </script>
+     <div class="data">
+      <form action = "{{ url_for('addrec') }}" method = "POST">
+         <h3>Student Information</h3>
+         Name<br>
+         <input type = "text" name = "nm" /></br>
+         
+         Address<br>
+         <textarea name = "add" ></textarea><br>
+         
+         City<br>
+         <input type = "text" name = "city" /><br>
+         
+         PINCODE<br>
+         <input type = "text" name = "pin" /><br>
+         <input type = "submit" value = "submit" /><br>
+         </form>
+     </div>
+   </body>
+</html>

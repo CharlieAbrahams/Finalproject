@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="stylesheet" href="list.css">
+  </head>
+   <body>
+      <div id="navbar1">
+         <nav>
+             <ul>
+                 <li><a href="home.html">home</a></li>
+                 <li><a href="student.html">enrole</a></li>
+                 <li><a href="list.html">lists</a></li>
+             </ul>
+         </nav>
+                  </div>
+     <div class="content1">
+         <h1>lists</h1>
+         <p>Showing all who have enroled</p>
+     </div>
+     <div class="banner1">
+     </div>
+     <div id="manuBtn">
+         <img src="menu.png" id="menu">
+     </div>
+
+     <section id="feature">
+         <div class="feature-box">
+             <div class="features">
+                 <h1>kikchen tools</h1>
+             </div>
+         </div>
+         </section>
+
+     <script>
+         var manuBtn = document.getElementById("manuBtn")
+         var navbar = document.getElementById("navbar1")
+         var menu = document.getElementById("menu")
+
+         manuBtn.onclick = function(){
+             if(navbar.style.right == "-250px"){
+                 navbar.style.right = "0";
+                 menu.src = "close.png";
+             }
+             else{
+                 navbar.style.right = "-250px";
+                 menu.src = "menu.png";
+             }
+         }
+     </script>
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Address>/td<
+            <td>city</td>
+            <td>Pincode</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["name"]}}</td>
+               <td>{{row["addr"]}}</td>
+               <td> {{ row["city"]}}</td>
+               <td>{{row['pin']}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+   </body>
+</html>

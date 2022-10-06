@@ -1,0 +1,46 @@
+<html>
+    <Title>Charlie's homedepo</Title>
+        <link rel="stylesheet" href="home.css">
+        <meta name="viewport" content="width =device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="banner">
+        <div id="navbar">
+            <nav>
+                <ul>
+                    <li><a href="idex.html">home</a></li>
+                    <li><a href="student.html">Enrole</a></li>
+                    <li><a href="list.html">lists</a></li>
+                </ul>
+                <nav>
+                     </div>
+                     <div>
+                        <div id="manuBtn">
+                            <img src="menu.png" id="menu">
+                        </div>
+          <div class="content">
+            <h1>Charlie's HighSchool</h1>
+            <p>A PLace For All<br> See more in Enrole</p>
+            <div>
+                <button type="button"><samp>shop</samp></button>
+            </div>
+          </div>
+        </div>
+        <script>
+            var manuBtn = document.getElementById("manuBtn")
+            var navbar = document.getElementById("navbar")
+            var menu = document.getElementById("menu")
+
+            manuBtn.onclick = function(){
+                if(navbar.style.right == "-250px"){
+                    navbar.style.right = "0";
+                    menu.src = "close.png";
+                }
+                else{
+                    navbar.style.right = "-250px";
+                    menu.src = "menu.png";
+                }
+            }
+        </script>
+    </body>
+</html>
