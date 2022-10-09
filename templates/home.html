@@ -1,6 +1,6 @@
 <html>
-    <Title>Charlie's homedepo</Title>
-        <link rel="stylesheet" href="home.css">
+    <Title>Charlie's HighSchool</Title>
+        <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='home.css')}}">
         <meta name="viewport" content="width =device-width, initial-scale=1">
     </head>
     <body>
@@ -8,7 +8,7 @@
         <div id="navbar">
             <nav>
                 <ul>
-                    <li><a href="idex.html">home</a></li>
+                    <li><a href="home.html">home</a></li>
                     <li><a href="student.html">Enrole</a></li>
                     <li><a href="list.html">lists</a></li>
                 </ul>
@@ -16,15 +16,11 @@
                      </div>
                      <div>
                         <div id="manuBtn">
-                            <img src="menu.png" id="menu">
+                            <img src="{{ checken }}" alt="User Image">
                         </div>
           <div class="content">
             <h1>Charlie's HighSchool</h1>
             <p>A PLace For All<br> See more in Enrole</p>
-            <div>
-                <button type="button"><samp>shop</samp></button>
-            </div>
-          </div>
         </div>
         <script>
             var manuBtn = document.getElementById("manuBtn")

@@ -1,14 +1,19 @@
 from flask import Flask, render_template, request
 import sqlite3 as sql
+from flask import render_template
+import os
+
 app = Flask(__name__)
+full_filename = os.path.join('static', 'menu.png')
 
 @app.route('/')
+@app.route('/home.html')
 def home():
-   return render_template('home.html')
+   return render_template("home.html", checken = full_filename)
 
-@app.route('/enternew')
+@app.route('/student.html')
 def new_student():
-   return render_template('student.html')
+   return render_template('student.html', checken = full_filename)
 
 @app.route('/addrec',methods = ['POST', 'GET'])
 def addrec():
@@ -31,10 +36,10 @@ def addrec():
          msg = "error in insert operation"
       
       finally:
-         return render_template("results.html",msg = msg)
+         return render_template("list.html",msg = msg, checken = full_filename)
          con.close()
          
-@app.route('/list')
+@app.route('/list.html')
 def list():
    con = sql.connect("database.db")
    con.row_factory = sql.Row
@@ -43,7 +48,7 @@ def list():
    cur.execute("select * from students")
    
    rows = cur.fetchall();
-   return render_template("list.html",rows = rows)
+   return render_template("list.html",rows = rows, checken = full_filename)
 
 if __name__ == '__main__':
-   app.run(debug = True)
+ app.run(debug = True,)

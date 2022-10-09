@@ -1,6 +1,6 @@
 <html>
    <head>
-      <link rel="stylesheet" href="student.css">
+      <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='student.css')}}">
   </head>
    <body>
       <div id="navbar2">
@@ -18,7 +18,7 @@
      <div class="banner2">
      </div>
      <div id="manuBtn">
-         <img src="menu.png" id="menu">
+        <img src="{{ checken }}">
      </div>
      <script>
          var manuBtn = document.getElementById("manuBtn")

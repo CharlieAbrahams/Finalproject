@@ -1,9 +1,10 @@
 <!doctype html>
 <html>
    <head>
-      <link rel="stylesheet" href="list.css">
+      <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='list.css')}}">
   </head>
    <body>
+     {{ msg }}
       <div id="navbar1">
          <nav>
              <ul>
@@ -20,13 +21,13 @@
      <div class="banner1">
      </div>
      <div id="manuBtn">
-         <img src="menu.png" id="menu">
+        <img src="{{ checken }}" alt="User Image">
      </div>
 
      <section id="feature">
          <div class="feature-box">
              <div class="features">
-                 <h1>kikchen tools</h1>
+                 <h1>list</h1>
              </div>
          </div>
          </section>
