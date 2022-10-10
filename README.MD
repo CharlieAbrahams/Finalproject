@@ -6,7 +6,7 @@
 ## Description
 
 Welcome to my website/project here you will find a database that demonstrates CRUD functionality, containers to host and deploy your application and continuous integration (CI)/continuous deployment (CD) pipeline that will automatically test, build and deploy your application. 
-My website will be inspired by the drama Better Call Saul showcasing his law firm.
+My website will be based off a school 
 
 
 # note 
